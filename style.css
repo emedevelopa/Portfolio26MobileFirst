@@ -179,7 +179,7 @@ p {
 
 .about__image {
     width: 200px;
-    margin-bottom: 2rem;
+    margin:2rem 0 2rem 0;
 }
 
 .about__title,

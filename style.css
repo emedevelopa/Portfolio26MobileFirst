@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+
+:root {
+    --mobileText: 0.8rem;
+    --desktopText: 1rem;
+
+    --mobileTitleSection: 3rem;
+    --desktopTitle: 4rem;
+
+    --mobileTitlexl: 6rem;
+    --desktopTitlexl: 9rem;
+    --desktopTitlexxl: 16rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Mono', monospace;
+}
+
+.container {
+    padding: 0 2rem;
+}
+
+h1,
+h2,
+h3,
+ul,
+li {
+    cursor: default;
+}
+
+a:visited,
+a:active {
+    color: inherit;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    line-height: 1.6;
+}
+.header {
+    height: 15vh;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.nav__list {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav__item {
+    list-style: none;
+}
+
+.nav__link {
+    text-decoration: none;
+    color: black;
+}
+
+.nav__link:visited,
+.nav__link:active {
+    color: black;
+}
+
+/*HOME*/
+
+@keyframes floatArrow {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes floatArrow2 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-6px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.floatArrow {
+    animation: floatArrow 1s ease-in-out infinite;
+}
+
+.floatArrow2 {
+    animation: floatArrow2 1s ease-in-out infinite;
+}
+
+.home {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 0;
+}
+
+.home__title {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home__title--main {
+    font-size: var(--mobileTitlexl);
+}
+
+.home__btn--arrow,
+.about__btn--arrow,
+.project__btn--arrow {
+    width: 20px;
+}
+
+.home__btn--quiensoy,
+.about__btn--vermas,
+.project__btn--vermas {
+    width: 100%;
+    border: none;
+    background: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-family: 'DM Mono', monospace;
+    font-size: 1rem;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+.home__title--item {
+    padding: 0.5rem 0;
+}
+
+
+/*ABOUT*/
+
+.about,
+.projects {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 0;
+}
+.about__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.about__image {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+.about__title,
+.projects__title {
+    font-size: var(--mobileTitleSection);
+}
+
+.about__text {
+    max-width: 850px;
+}
+
+/*PROYECTOS*/
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+}
+
+.project__card {
+    max-width: 250px;
+}
+
+.project__img {
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+/*FOOTER*/
+
+.footer {
+    background-color: black;
+    color: white;
+}
+
+.footer__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 0;
+    gap: 2rem;
+    padding: 2rem 2rem 2rem;
+}
+
+.footer__link {
+    color: white;
+}
+
+.footer__copy {
+    padding: 1rem;
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 768px) {
+    .projects__container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .home__title {
+        align-items: center;
+        flex-direction: row;
+    }
+
+    .home__title--main {
+        font-size: var(--desktopTitlexl);
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .home {
+        padding: 0;
+    }
+
+    .home__title {
+        gap: 10rem;
+    }
+
+    .about {
+        height: 100vh;
+    }
+
+    .about__content {
+        flex-direction: row;
+    }
+
+
+
+    
+}
+
+
+
+@media (min-width: 1400px) {
+    .home__title--main {
+        font-size: var(--desktopTitlexxl);
+    }
+
+    .home__title--item{
+    font-size: 1.5rem;
+    }
+}
